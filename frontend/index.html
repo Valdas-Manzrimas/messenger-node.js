@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="homeContainer">
+      <!-- Nav Bar -->
+      <nav class="navBar">
+        <div class="navBar-left">
+          <span class="time" id="currentTime">Time</span>
+        </div>
+        <div class="navBar-right">
+          <span class="username" id="userName">Username</span>
+          <img
+            class="profilePicture"
+            id="userPicture"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <button class="btn" id="logOut">Logout</button>
+        </div>
+      </nav>
+      <div class="mainContainer">
+        <!-- Side Bar -->
+        <nav class="sideBar">
+          <div class="sideHeader">
+            <span class="username" id="sideUserName">Username</span>
+            <img src="./assets/chat.svg" class="new-Message"/>
+          </div>
+          <div class="sideBar-Header">
+            <span>Channels</span>
+            <img class="add-item" src="./assets/add.svg" id="addChannel" />
+          </div>
+          <div class="allChannels" id="channels">
+            <ul class="list-group" id="itemsList"></ul>
+          </div>
+          <div class="sideBar-Header">
+            <span>Users</span>
+            <img class="add-item" src="./assets/add.svg" id="addUser" />
+          </div>
+          <div class="allChannels" id="users">
+            <ul class="list-group" id="userList"></ul>
+          </div>
+        </nav>
+
+        <section class="chatRoom">
+          <div class="chatHeader">
+            <span>Channel</span>
+            <span>Details</span>
+          </div>
+          <div class="messages" id="chatContent"></div>
+          <div class="inputDiv">
+            <input type="text" class="messageInput" id="messageInput" contenteditable="true"></input>
+            <div class="msg-tool-div">
+            <button class="send-msg-btn" id="sendMessageBtn">Send</button>
+            </div>
+          </div>
+        </section>
+
+
+        <form class="add-model" id="addNewChannelContainer"> <!-- channel model-->
+          <div class="add-model__header">
+            <h5 id="modelTitle">Add Channel</h5>
+            <img src="./assets/close.svg" class="closeBtn" id="closeChannelCont"></img>
+          </div>
+          <div class="add-model__body">
+            <input type="text" id="channelName" name="channelName" class="inputName">
+            <input type="submit" value="Submit" id="submitChannelName">
+          </div>
+        </form>
+
+        <form class="add-model" id="addNewUserContainer"> <!-- User model-->
+          <div class="add-model__header">
+            <h5>Add User</h5>
+            <img src="./assets/close.svg" class="closeBtn" id="closeModelCont"></img>
+          </div>
+          <div class="add-model__body">
+            <input type="text" id="userNameInput" name="userName" class="inputName">
+            <input type="submit" value="Submit" id="submitUserName">
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="functions.js"></script>
+  </body>
+</html>

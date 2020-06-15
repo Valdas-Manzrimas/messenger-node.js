@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <div class="registerContainer">
+      <div class="card text-center">
+        <div class="card-header">
+          Register
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="username" class="form-control" id="username" />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Repeat password</label>
+            <input type="password" class="form-control" id="rPassword" />
+          </div>
+          <a class="btn btn-primary" onclick="register()">Register</a>
+        </div>
+        <div class="card-footer text-muted">
+          Have an account? <a href="/frontend/login">Login</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./register.js"></script>
+  </body>
+</html>

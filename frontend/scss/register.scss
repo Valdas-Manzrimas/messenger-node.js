@@ -1,0 +1,10 @@
+.registerContainer {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        width: 400px;
+    }
+}
